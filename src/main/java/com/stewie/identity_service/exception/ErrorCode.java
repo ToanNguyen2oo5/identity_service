@@ -6,7 +6,7 @@ import org.springframework.http.HttpStatusCode;
 
 @Getter
 public enum ErrorCode {
-    UNCATEGORIZED_ERROR(999,"user existed", HttpStatus.INTERNAL_SERVER_ERROR),
+    UNCATEGORIZED_ERROR(999,"uncategorized error", HttpStatus.INTERNAL_SERVER_ERROR),
     USER_EXISTED(101,"user existed", HttpStatus.BAD_REQUEST),
     INVALID_USERNAME(102,"username must be at least 3 characters", HttpStatus.BAD_REQUEST),
     INVALID_PASSWORD(103,"password must be at least 8 characters", HttpStatus.BAD_REQUEST),

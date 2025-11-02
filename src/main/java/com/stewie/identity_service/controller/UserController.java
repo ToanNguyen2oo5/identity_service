@@ -63,7 +63,7 @@ public class UserController {
                 .build();
     }
 
-    @GetMapping("/myInfo")
+    @GetMapping("/my-info")
     ApiResponse<UserResponse> getMyInfo(){
         return ApiResponse.<UserResponse>builder()
                 .code(100)

@@ -1,24 +1,23 @@
 package com.stewie.identity_service.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.*;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 import java.util.Set;
 
 
-@Entity
 @Getter
 @Setter
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@Entity
 public class Role {
     @Id
-    private String id;
-    private String desciption;
+    String name;
+    String description;
     @ManyToMany
     Set<Permission> permissions;
 }

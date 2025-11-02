@@ -3,17 +3,18 @@ package com.stewie.identity_service.entity;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.*;
+import lombok.experimental.FieldDefaults;
 
 
-@Entity
 @Getter
 @Setter
 @Builder
-@AllArgsConstructor
 @NoArgsConstructor
-
+@AllArgsConstructor
+@FieldDefaults(level = AccessLevel.PRIVATE)
+@Entity
 public class Permission {
     @Id
-    private String id;
-    private String desciption;
+    private String name;
+    private String description;
 }

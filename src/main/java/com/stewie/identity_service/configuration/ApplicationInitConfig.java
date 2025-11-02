@@ -1,6 +1,7 @@
 package com.stewie.identity_service.configuration;
 
 import com.stewie.identity_service.entity.User;
+import com.stewie.identity_service.enums.Role;
 import com.stewie.identity_service.repository.UserRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -25,7 +26,7 @@ public class ApplicationInitConfig {
     return args -> {
         if(userRepository.findByUsername("admin").isEmpty()){
         var roles = new HashSet<String>();
-        roles.add("ADMIN");
+        roles.add(Role.ADMIN.name());
             User user = User.builder()
                     .username("admin")
                     .password(passwordEncoder.encode("admin"))

@@ -8,6 +8,7 @@ import com.stewie.identity_service.enums.Role;
 import com.stewie.identity_service.exception.AppException;
 import com.stewie.identity_service.exception.ErrorCode;
 import com.stewie.identity_service.mapper.UserMapper;
+import com.stewie.identity_service.repository.RoleRepository;
 import com.stewie.identity_service.repository.UserRepository;
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -29,6 +30,7 @@ import java.util.stream.Collectors;
 @FieldDefaults(level = AccessLevel.PRIVATE,makeFinal = true)
 public class UserService {
     UserRepository  userRepository;
+    RoleRepository roleRepository;
     UserMapper userMapper;
     PasswordEncoder passwordEncoder;
 
